@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>看球直播 · 日常观赛笔记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafafc;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+            color: #1f2a3e;
+            line-height: 1.7;
+            padding: 2.5rem 1.2rem 4rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            margin-bottom: 3.2rem;
+            border-bottom: 1px solid #e4e7ed;
+            padding-bottom: 2.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            color: #0b1a2b;
+            margin-bottom: 0.6rem;
+            line-height: 1.2;
+        }
+
+        .hero .sub {
+            font-size: 0.95rem;
+            color: #5b687c;
+            border-left: 3px solid #b4c2d6;
+            padding-left: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        /* 背景说明 */
+        .background-note {
+            background: #f2f4f8;
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 2.8rem;
+            font-size: 0.95rem;
+            color: #2c3a52;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .background-note strong {
+            font-weight: 550;
+            color: #0b1a2b;
+        }
+
+        /* 三段式介绍 */
+        .section-card {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-card h2 {
+            font-size: 1.25rem;
+            font-weight: 530;
+            color: #19273b;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed #d8dce3;
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+
+        .section-card p {
+            margin-top: 0.8rem;
+            font-size: 0.98rem;
+            color: #2f3e57;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .section-card p + p {
+            margin-top: 0.75rem;
+        }
+
+        .section-card .inset-link {
+            color: #2b5f8a;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd5e1;
+            transition: border-color 0.2s;
+        }
+
+        .section-card .inset-link:hover {
+            border-bottom-color: #2b5f8a;
+        }
+
+        /* 引语 / 延伸阅读块 */
+        .digression {
+            background: #ffffff;
+            border: 1px solid #e9ecf0;
+            border-radius: 14px;
+            padding: 1.5rem 1.8rem;
+            margin: 2.2rem 0 2.8rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .digression p {
+            font-size: 0.96rem;
+            color: #3b4a63;
+        }
+
+        .digression .label {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 0.3px;
+            background: #eef1f6;
+            color: #3b4a63;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        /* 页尾访问提示 */
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e4e7ed;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5d6b80;
+        }
+
+        .footer-note a {
+            color: #1f2a3e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #bdc6d4;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .footer-note a:hover {
+            color: #0b1a2b;
+            border-bottom-color: #0b1a2b;
+        }
+
+        .footer-note .small-meta {
+            display: block;
+            margin-top: 1.2rem;
+            font-size: 0.75rem;
+            color: #8e9bb0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.8rem 1rem 3rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .background-note {
+                padding: 1.2rem 1.2rem;
+            }
+            .section-card h2 {
+                font-size: 1.1rem;
+            }
+            .digression {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>球场内外 · 日常索引</h1>
+        <div class="sub">从赛前名单到赛后复盘，一片安静的观赛角落</div>
+    </div>
+
+    <!-- 背景说明 -->
+    <div class="background-note">
+        <strong>关于这个站点</strong> —— 它更像一本随手翻开的笔记本：没有弹幕干扰，没有横幅催促。你在这里做的最多的事，就是查询赛程、对照阵容、翻阅几分钟前的文字记录。<br>
+        如果你也习惯在屏幕前同时开两三个页面，一边看画面，一边读数据，那么这里大概会合你的口味。
+    </div>
+
+    <!-- 三段自然介绍 -->
+    <div class="section-card">
+        <h2>赛前 · 对照与准备</h2>
+        <p>比赛日当天下午，我通常会先打开 <a href="https://space-kanqiu.com" class="inset-link">看球直播</a> 看一眼首发名单的变动。习惯了把预测阵容和实际公布名单并排放在两个窗口里——左边是社交媒体的爆料，右边是站内整理好的对阵详情。这种对照本身就有一种验证的乐趣，即使猜错了，也能多记住几个轮换球员的名字。</p>
+        <p>页面上的信息密度不算高，但关键项都在：开球时间、主客队阵型、伤停备注。足够在赛前二十分钟内完成一次快速检索。</p>
+    </div>
+
+    <div class="section-card">
+        <h2>赛中 · 延伸阅读</h2>
+        <p>进入比赛节奏后，我不喜欢频繁切换画面，但偶尔会在广告间隙或死球阶段，点开站内的实时文字更新。那些简洁的进球描述、换人说明，比社交网络上的碎片更安静，也更准确。有时还会顺着比赛动态，点进相关球队的近期数据页——不是为了分析，纯粹为了满足“这个前锋最近三场进了几个”之类临时冒出的问题。</p>
+        <p>这种延伸阅读不需要多深入，只要刚好接住瞬间的好奇心，就足够。</p>
+    </div>
+
+    <div class="section-card">
+        <h2>赛后 · 记录与归档</h2>
+        <p>终场哨响之后，我习惯把比分和印象深刻的片段记在本地备忘录里，然后回到 <a href="https://space-kanqiu.com" class="inset-link">看球直播</a> 确认几项数据：射正次数、控球率、黄牌分布。这些数字本身不会改变我对比赛的感受，但它们能让记忆中的画面有一个可以抓握的框架。有些比赛过了一周再翻出来，看着那行简短的技术统计，当时的场面又能浮起七八分。</p>
+    </div>
+
+    <!-- digression 延伸阅读块（类似 FAQ 摘要） -->
+    <div class="digression">
+        <span class="label">日常提问箱</span>
+        <p><strong>Q：</strong> 如果我只是想快速知道今晚有哪些比赛，需要翻很多层菜单吗？<br>
+        <strong>A：</strong> 首页直接列了当日主要场次，按时间排列，联赛和杯赛用浅色标签区分。点进任何一场，都能看到实时状态和基础数据。没有多余的弹窗或浮层。</p>
+        <p style="margin-top: 1rem;"><strong>Q：</strong> 适合在手机浏览器上用吗？<br>
+        <strong>A：</strong> 窄屏下文字重新排布，列表收起次级信息，核心数据仍然可见。大部分操作单手可完成。</p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <p>如果你也习惯在安静页面里完成赛前查询、赛中对照和赛后回顾，不妨把 <a href="https://space-kanqiu.com">看球直播</a> 放进书签栏最顺手的位置。</p>
+        <span class="small-meta">没有推送，没有弹窗 · 只提供你需要的那一行信息</span>
+    </div>
+
+</div>
+</body>
+</html>
